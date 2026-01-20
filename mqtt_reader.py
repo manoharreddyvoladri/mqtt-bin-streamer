@@ -8,12 +8,12 @@ from datetime import datetime
 
 # MQTT Configuration
 MQTT_CONFIG = {
-    "MQTT_BROKER": "w8e06e1d.ala.asia-southeast1.emqxsl.com",
-    "MQTT_PORT": 8883,
-    "MQTT_TOPIC": "vehicle/bin_Data/data",
-    "MQTT_TX_COMMAND_TOPIC": "vehicle/tx_cmd",
-    "MQTT_USERNAME": "PRUDHVI",
-    "MQTT_PASSWORD": "PRUDHVI"
+    "MQTT_BROKER": "************.emqxsl.com",
+    "MQTT_PORT": ****,
+    "MQTT_TOPIC": "**********",
+    "MQTT_TX_COMMAND_TOPIC": "********",
+    "MQTT_USERNAME": "*******",
+    "MQTT_PASSWORD": "*********"
 }
 
 class MQTTReader:
@@ -177,3 +177,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
