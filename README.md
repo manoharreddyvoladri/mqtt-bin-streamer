@@ -126,9 +126,9 @@ Create a `config.json` file:
 ```json
 {
   "MQTT_BROKER": "**********.emqxsl.com",
-  "MQTT_PORT": 8883,
-  "MQTT_TOPIC": "vehicle/bin_Data/data",
-  "MQTT_TX_COMMAND_TOPIC": "vehicle/tx_cmd",
+  "MQTT_PORT": PORT,
+  "MQTT_TOPIC": "***",
+  "MQTT_TX_COMMAND_TOPIC": "*****",
   "MQTT_USERNAME": "your_username",
   "MQTT_PASSWORD": "your_password"
 }
@@ -246,5 +246,6 @@ Thumbs.db
 ## Author
 
 Created for MQTT-based binary file transfer with integrity checking and real-time monitoring.
+
 
 
