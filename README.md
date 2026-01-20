@@ -50,7 +50,7 @@ A robust Streamlit application for uploading and receiving binary files over MQT
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/mqtt-bin-streamer.git
+[https://github.com/manoharreddyvoladri/mqtt-bin-streamer.git]
 cd mqtt-bin-streamer
 ```
 
@@ -246,4 +246,5 @@ Thumbs.db
 ## Author
 
 Created for MQTT-based binary file transfer with integrity checking and real-time monitoring.
+
 
