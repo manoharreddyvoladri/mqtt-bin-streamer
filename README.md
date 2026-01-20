@@ -76,7 +76,7 @@ pip install -r requirements.txt
 
 Create a `.env` file in the project root:
 ```bash
-MQTT_BROKER=w8e06e1d.ala.asia-southeast1.emqxsl.com
+MQTT_BROKER= *****.emqxsl.com
 MQTT_PORT=8883
 MQTT_TOPIC=vehicle/bin_Data/data
 MQTT_TX_COMMAND_TOPIC=vehicle/tx_cmd
@@ -94,7 +94,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MQTT_CONFIG = {
-    "MQTT_BROKER": os.getenv("MQTT_BROKER", "w8e06e1d.ala.asia-southeast1.emqxsl.com"),
+    "MQTT_BROKER": os.getenv("MQTT_BROKER", "******.emqxsl.com"),
     "MQTT_PORT": int(os.getenv("MQTT_PORT", 8883)),
     "MQTT_TOPIC": os.getenv("MQTT_TOPIC", "vehicle/bin_Data/data"),
     "MQTT_TX_COMMAND_TOPIC": os.getenv("MQTT_TX_COMMAND_TOPIC", "vehicle/tx_cmd"),
@@ -111,7 +111,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MQTT_CONFIG = {
-    "MQTT_BROKER": os.getenv("MQTT_BROKER", "w8e06e1d.ala.asia-southeast1.emqxsl.com"),
+    "MQTT_BROKER": os.getenv("MQTT_BROKER", "****.emqxsl.com"),
     "MQTT_PORT": int(os.getenv("MQTT_PORT", 8883)),
     "MQTT_TOPIC": os.getenv("MQTT_TOPIC", "vehicle/bin_Data/data"),
     "MQTT_TX_COMMAND_TOPIC": os.getenv("MQTT_TX_COMMAND_TOPIC", "vehicle/tx_cmd"),
@@ -125,7 +125,7 @@ MQTT_CONFIG = {
 Create a `config.json` file:
 ```json
 {
-  "MQTT_BROKER": "w8e06e1d.ala.asia-southeast1.emqxsl.com",
+  "MQTT_BROKER": "**********.emqxsl.com",
   "MQTT_PORT": 8883,
   "MQTT_TOPIC": "vehicle/bin_Data/data",
   "MQTT_TX_COMMAND_TOPIC": "vehicle/tx_cmd",
@@ -146,10 +146,10 @@ with open('config.json') as f:
 
 ```bash
 # For app.py
-streamlit run app.py -- --broker w8e06e1d.ala.asia-southeast1.emqxsl.com --port 8883
+streamlit run app.py
 
 # For mqtt_reader.py
-python mqtt_reader.py --broker w8e06e1d.ala.asia-southeast1.emqxsl.com --port 8883
+python mqtt_reader.py 
 ```
 
 ## Usage
@@ -243,32 +243,7 @@ Thumbs.db
 - Ensure JSON payload is complete
 - Check if binary data is properly encoded
 
-## Performance Tips
-
-- **Chunk Size**: 250 bytes works for most networks. Increase for faster networks, decrease for unstable connections
-- **Send Interval**: 2 seconds allows for processing. Decrease if network is stable
-- **QoS Level**: Currently set to 1 (at least once). Use 0 for fire-and-forget, 2 for exactly-once
-- **Connection**: SSL/TLS adds overhead but provides security
-
-## API Overview
-
-### `create_payload(chunk_data, chunk_num, total_chunks, filename, file_size)`
-Creates JSON payload with headers and Base64-encoded data
-
-### `calculate_crc32(data)`
-Calculates CRC32 checksum for integrity verification
-
-### `send_bin_file_chunks(file_bytes, filename, mqtt_client, progress_placeholder, status_placeholder)`
-Sends file chunks with 2-second intervals
-
-## License
-
-MIT License
-
-## Support
-
-For issues and feature requests, please open an issue on GitHub.
-
 ## Author
 
 Created for MQTT-based binary file transfer with integrity checking and real-time monitoring.
+
