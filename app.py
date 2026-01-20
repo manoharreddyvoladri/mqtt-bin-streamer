@@ -10,12 +10,12 @@ import binascii
 
 # MQTT Configuration
 MQTT_CONFIG = {
-    "MQTT_BROKER": "w8e06e1d.ala.asia-southeast1.emqxsl.com",
-    "MQTT_PORT": 8883,
-    "MQTT_TOPIC": "vehicle/bin_Data/data",
-    "MQTT_TX_COMMAND_TOPIC": "vehicle/tx_cmd",
-    "MQTT_USERNAME": "PRUDHVI",
-    "MQTT_PASSWORD": "PRUDHVI"
+    "MQTT_BROKER": "**************.emqxsl.com",
+    "MQTT_PORT": ****,
+    "MQTT_TOPIC": "***********",
+    "MQTT_TX_COMMAND_TOPIC": "********",
+    "MQTT_USERNAME": "***",
+    "MQTT_PASSWORD": "***"
 }
 
 CHUNK_SIZE = 250  # bytes
@@ -275,3 +275,4 @@ with st.expander("ℹ️ How it works"):
 
 st.divider()
 st.caption("🔒 Secure MQTT Connection | BIN File Uploader v1.0")
+
